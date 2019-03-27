@@ -15,6 +15,7 @@
 		F772CA48224BE90700312C4E /* EKKPost.m in Sources */ = {isa = PBXBuildFile; fileRef = F772CA47224BE90700312C4E /* EKKPost.m */; };
 		F7A7797B224BEE0A00AE2135 /* EKKSubredditClient.m in Sources */ = {isa = PBXBuildFile; fileRef = F7A7797A224BEE0A00AE2135 /* EKKSubredditClient.m */; };
 		F7A7797F224BF4F400AE2135 /* EKKPostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A7797E224BF4F400AE2135 /* EKKPostTableViewCell.swift */; };
+		F7A77984224C07D000AE2135 /* PostTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A77983224C07D000AE2135 /* PostTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		F7A7797A224BEE0A00AE2135 /* EKKSubredditClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKKSubredditClient.m; sourceTree = "<group>"; };
 		F7A7797D224BF4F400AE2135 /* Reddit-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reddit-C-Bridging-Header.h"; sourceTree = "<group>"; };
 		F7A7797E224BF4F400AE2135 /* EKKPostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EKKPostTableViewCell.swift; sourceTree = "<group>"; };
+		F7A77983224C07D000AE2135 /* PostTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,12 +66,12 @@
 		F772CA2C224BE2F000312C4E /* Reddit-C */ = {
 			isa = PBXGroup;
 			children = (
+				F7A77980224C078D00AE2135 /* ModelControllers */,
 				F772CA45224BE34200312C4E /* Models */,
 				F772CA44224BE33C00312C4E /* Storyboards */,
 				F772CA43224BE33300312C4E /* Resources */,
 				F7A7797C224BEE1100AE2135 /* NetWorkClients */,
-				F7A7797E224BF4F400AE2135 /* EKKPostTableViewCell.swift */,
-				F7A7797D224BF4F400AE2135 /* Reddit-C-Bridging-Header.h */,
+				F7A77983224C07D000AE2135 /* PostTableViewController.swift */,
 			);
 			path = "Reddit-C";
 			sourceTree = "<group>";
@@ -111,6 +113,15 @@
 				F7A7797A224BEE0A00AE2135 /* EKKSubredditClient.m */,
 			);
 			path = NetWorkClients;
+			sourceTree = "<group>";
+		};
+		F7A77980224C078D00AE2135 /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7A7797E224BF4F400AE2135 /* EKKPostTableViewCell.swift */,
+				F7A7797D224BF4F400AE2135 /* Reddit-C-Bridging-Header.h */,
+			);
+			path = ModelControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F772CA3D224BE2F400312C4E /* main.m in Sources */,
+				F7A77984224C07D000AE2135 /* PostTableViewController.swift in Sources */,
 				F772CA48224BE90700312C4E /* EKKPost.m in Sources */,
 				F7A7797F224BF4F400AE2135 /* EKKPostTableViewCell.swift in Sources */,
 				F772CA2F224BE2F000312C4E /* AppDelegate.m in Sources */,
@@ -341,7 +353,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Erich-Kumpunen.Reddit-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Reddit-C/Reddit-C-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Reddit-C/ModelControllers/Reddit-C-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -362,7 +374,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Erich-Kumpunen.Reddit-C";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Reddit-C/Reddit-C-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Reddit-C/ModelControllers/Reddit-C-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

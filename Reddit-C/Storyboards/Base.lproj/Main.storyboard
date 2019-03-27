@@ -12,7 +12,7 @@
         <!--subReddit Name (maybe?)-->
         <scene sceneID="NWF-yF-EZX">
             <objects>
-                <tableViewController id="zTN-XJ-yVf" sceneMemberID="viewController">
+                <tableViewController id="zTN-XJ-yVf" customClass="PostTableViewController" customModule="Reddit_C" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="08y-7F-QVe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,30 +23,30 @@
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="jHQ-YA-gEE" customClass="EKKPostTableViewCell" customModule="Reddit_C" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="postDetailCell" rowHeight="150" id="jHQ-YA-gEE" customClass="EKKPostTableViewCell" customModule="Reddit_C" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="150"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jHQ-YA-gEE" id="CyG-Jl-Lei">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="q9j-2y-ct7">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="q9j-2y-ct7">
+                                            <rect key="frame" x="37.5" y="30" width="300" height="89.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title of Post" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RZl-o8-7ET">
-                                                    <rect key="frame" x="142" y="0.0" width="91.5" height="46"/>
+                                                    <rect key="frame" x="104.5" y="0.0" width="91.5" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🆙 Upvotes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IG5-To-uMW">
-                                                    <rect key="frame" x="142" y="52" width="91" height="46"/>
+                                                    <rect key="frame" x="104.5" y="31" width="91" height="25"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="💬 Comments" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUa-yt-CDH">
-                                                    <rect key="frame" x="132" y="104" width="111" height="46"/>
+                                                    <rect key="frame" x="94.5" y="62" width="111" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -54,13 +54,13 @@
                                             </subviews>
                                         </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="q9j-2y-ct7" firstAttribute="centerX" secondItem="CyG-Jl-Lei" secondAttribute="centerX" id="UQU-86-yG2"/>
+                                        <constraint firstItem="q9j-2y-ct7" firstAttribute="centerY" secondItem="CyG-Jl-Lei" secondAttribute="centerY" id="Vg8-T4-zJY"/>
+                                        <constraint firstItem="q9j-2y-ct7" firstAttribute="width" secondItem="CyG-Jl-Lei" secondAttribute="width" multiplier="0.8" id="d1b-9f-S4I"/>
+                                        <constraint firstItem="q9j-2y-ct7" firstAttribute="height" secondItem="CyG-Jl-Lei" secondAttribute="height" multiplier="0.6" id="eks-1B-Vxq"/>
+                                    </constraints>
                                 </tableViewCellContentView>
-                                <constraints>
-                                    <constraint firstItem="q9j-2y-ct7" firstAttribute="centerX" secondItem="jHQ-YA-gEE" secondAttribute="centerX" id="3nJ-XA-2gQ"/>
-                                    <constraint firstItem="q9j-2y-ct7" firstAttribute="centerY" secondItem="jHQ-YA-gEE" secondAttribute="centerY" id="5sH-Te-Djx"/>
-                                    <constraint firstItem="q9j-2y-ct7" firstAttribute="height" secondItem="jHQ-YA-gEE" secondAttribute="height" id="gO7-G6-nzB"/>
-                                    <constraint firstItem="q9j-2y-ct7" firstAttribute="width" secondItem="jHQ-YA-gEE" secondAttribute="width" id="qtC-ZL-aNy"/>
-                                </constraints>
                                 <connections>
                                     <outlet property="commentsLabel" destination="lUa-yt-CDH" id="dbh-R3-jpL"/>
                                     <outlet property="titleLabel" destination="RZl-o8-7ET" id="DPh-i7-BpF"/>
@@ -74,6 +74,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="subReddit Name (maybe?)" id="OqI-HO-XzM"/>
+                    <connections>
+                        <outlet property="searchBar" destination="f29-a2-wwF" id="bJw-7p-t59"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NKD-a9-4yC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

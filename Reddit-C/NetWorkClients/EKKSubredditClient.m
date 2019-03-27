@@ -34,12 +34,13 @@
         }
         NSDictionary *jsonDictionary = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&error];
         NSDictionary *dataDictionary = jsonDictionary[@"data"];
-        NSArray *childrenArray = dataDictionary[@"childrenArray"];
+        NSArray *childrenArray = dataDictionary[@"children"];
         
         NSMutableArray *postsArray = [[NSMutableArray alloc] init];
         for (NSDictionary *postDictionary in childrenArray)
         {
             EKKPost *post = [[EKKPost alloc] initWithDict:postDictionary];
+            NSLog(@"😼%@", post.title);
             [postsArray addObject:post];
         }
         completion(postsArray);
